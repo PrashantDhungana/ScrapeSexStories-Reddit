@@ -1,5 +1,5 @@
 # ScrapeSexStories-Reddit
-This is a **Python** Script written in Python 3. It scrapes the **Reddit Api** for the subreddit **r/sexstories** and saves the story inside folders using the respective tags for the stories.
+This is a **Python** Script written in Python 3. It scrapes the **Reddit Api** for the subreddit **r/sexstories** and saves the stories inside folders using the respective tags for the stories.
 
 ### Modules used:
 
