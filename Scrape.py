@@ -15,9 +15,9 @@ newData=data['data']['children']
 
 
 #function for creating files
-def createFiles(path,newtiile,title,body):
+def createFiles(path,newtitle,title,body):
 	
-	f = open(path+"/"+newtitle, "w")
+	f = open(path+"/"+newtitle, "w",encoding="utf-8")
 	f.write("\t\t\t\t\t\t\t\t\t\t"+title+"\n\n")
 	f.write(body)
 	f.close()
