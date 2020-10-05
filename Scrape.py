@@ -20,9 +20,10 @@ def createFiles(path,newtitle,title,body):
 	
 	f = open(path+"/"+newtitle+".txt", "w",encoding="utf-8")
 	f.write("\t\t\t\t\t\t\t\t\t\t"+title+"\n\n")
+	print("Inserting Inside !!!")
 	f.write(body)
 	f.close()
-	print("Eggs fertilized Successfully !!! \n\n")
+	print("Eggs fertilized Successfully !!! \n")
 
 for story in newData:
 	print("Checking out the Body !!!")
@@ -35,7 +36,7 @@ for story in newData:
 
 	link=story['data']['permalink']
 	gotolink=requests.get('https://api.reddit.com/'+link,headers=header)
-	print("Opening Clothes !!!")
+	print("Performing Foreplay !!!!")
 
 	individualData=gotolink.json()
 	
@@ -47,15 +48,15 @@ for story in newData:
 
 
 	#Get tag Flair
-	print("Performing foreplay !!!!")
-
+	print("Opening Innerware !!!")
+	print("Asking friend to Tag along !!!")
 	tag=individualData[0]['data']['children'][0]['data']['link_flair_text']
 	if tag is None:
 		tag="None"
 	else:	
 		tag=individualData[0]['data']['children'][0]['data']['link_flair_text'].split()[0]
 	
-	print("Watching time !!!")
+	print("Watching the Time !!!")
 	Date=datetime.datetime.now()
 	dirName=str(Date.year)+"_"+str(Date.month)+"_"+str(Date.day)
 
