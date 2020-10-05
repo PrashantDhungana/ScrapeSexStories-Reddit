@@ -1,0 +1,6 @@
+Features to hide the dir
+Sort the file according to upvotes
+Write number of upvotes
+Automate the script daily
+Write the descriptions like link inside each story
+Use cmd line arguments
