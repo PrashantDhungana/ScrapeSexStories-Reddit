@@ -18,17 +18,21 @@ newData=data['data']['children']
 #function for creating files
 def createFiles(path,newtitle,title,body):
 	
-	f = open(path+"/"+newtitle, "w",encoding="utf-8")
+	f = open(path+"/"+newtitle+".txt", "w",encoding="utf-8")
 	f.write("\t\t\t\t\t\t\t\t\t\t"+title+"\n\n")
 	f.write(body)
 	f.close()
-	print("Eggs fertilized Successfully !!!")
+	print("Eggs fertilized Successfully !!! \n\n")
 
 for story in newData:
 	print("Checking out the Body !!!")
 
 	title=story['data']['title']
-	newtitle=title.replace(" ","_")[:25] #Make Title without any space
+	newtitle=title.replace(" ","_")[:25]
+	charsToReplace={'\'':'','-':"","\"":"","[":"","]":"","/":"_"}
+	for key, value in charsToReplace.items():
+		newtitle=newtitle.replace(key,value) #Make Title without ' or - 
+
 	link=story['data']['permalink']
 	gotolink=requests.get('https://api.reddit.com/'+link,headers=header)
 	print("Opening Clothes !!!")
